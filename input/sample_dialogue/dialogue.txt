@@ -1,0 +1,5 @@
+Konrad: Hallo, das ist ein Test unseres Audio-Generierungssystems.
+Inga: Toll, dass das mit mehreren Sprechern und Stimmen funktioniert.
+Konrad: Das System weist jedem Sprecher die passende Stimme aus der Konfigurationsdatei zu.
+Inga: Und es unterstützt sowohl OpenAI als auch ElevenLabs-Stimmen - sogar eine Mischung aus beiden.
+Konrad: Das alles ist Teil unserer Audio-Verarbeitungspipeline.

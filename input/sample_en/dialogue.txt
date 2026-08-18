@@ -1,0 +1,5 @@
+Konrad: Hello, this is a test of the audio generation system.
+Inga: It's great to see that it works with multiple speakers and voices.
+Konrad: The system assigns each speaker to the corresponding voice from the configuration file.
+Inga: And it supports both OpenAI and ElevenLabs voices, or even a mix of both providers.
+Konrad: This is all part of our audio processing pipeline.
