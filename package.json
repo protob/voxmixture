@@ -1,39 +1,34 @@
 {
-  "name": "textmix-tools",
-  "version": "1.0.0",
+  "name": "voxmixture",
+  "version": "0.1.0",
   "type": "module",
-  "description": "Text in, audio out, pipelines in between",
+  "description": "Mix many voices into one episode: dialogue script to TTS to loudness-balanced audio.",
+  "license": "MIT",
+  "keywords": ["tts", "podcast", "elevenlabs", "openai", "ffmpeg", "bun", "loudness"],
+  "engines": {
+    "bun": ">=1.1"
+  },
+  "bin": {
+    "voxmixture": "src/app/cli.ts"
+  },
   "scripts": {
-    "verify-all": "bun tests/verifiers/verify-all.ts",
-    "start": "bun src/core/app/runners/run-with-audio-openai.ts",
-    "start:openai": "bun src/core/app/runners/run-with-audio-openai.ts",
-    "start:elevenlabs": "bun src/core/app/runners/run-with-audio-elevenlabs.ts",
-    "start:mixed": "bun src/core/app/runners/run-with-audio-mixed.ts"
+    "start": "bun src/app/cli.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "verify": "bun verify/verify-sim.ts"
   },
   "dependencies": {
-    "@mozilla/readability": "^0.5.0",
-    "chalk": "^5.3.0",
-    "dotenv": "^16.3.1",
-    "elevenlabs": "^0.36.4",
-    "jsdom": "^25.0.1",
-    "node-fetch": "^3.3.2",
-    "node-html-markdown": "^1.3.0",
-    "openai": "^4.24.1",
-    "p-limit": "^6.1.0",
-    "remark": "^15.0.1",
-    "remeda": "^2.16.0",
-    "remove-markdown": "^0.5.5",
-    "strip-markdown": "^6.0.0",
-    "turndown": "^7.2.0",
-    "turndown-plugin-gfm": "^1.0.2",
-    "yaml": "^2.3.4",
-    "zod": "^3.23.8"
+    "chalk": "^5",
+    "openai": "^4",
+    "p-limit": "^6",
+    "remeda": "^2",
+    "yaml": "^2",
+    "zod": "^3"
   },
   "devDependencies": {
-    "@types/jsdom": "^21.1.7",
-    "@types/node": "^22.9.0",
-    "@types/turndown": "^5.0.5",
-    "bun-types": "^1.0.0",
-    "vitest": "^2.1.4"
+    "@types/node": "^26.1.1",
+    "bun-types": "latest",
+    "typescript": "^5",
+    "vitest": "^3"
   }
 }

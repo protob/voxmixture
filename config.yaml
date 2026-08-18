@@ -1,0 +1,44 @@
+# voxmixture configuration
+characters:
+  - id: konrad
+    name: Konrad
+    provider: openai            # optional; omit to use processing.providers.default
+    voices:
+      openai:
+        voice_id: onyx
+        model: tts-1
+      elevenlabs:
+        voice_id: OI5E0KTcArkkIzhpC4xj
+        settings:
+          stability: 0.8
+          similarity_boost: 0.8
+          style: 0.0
+          use_speaker_boost: true
+
+  - id: inga
+    name: Inga
+    provider: elevenlabs
+    # gain_db: 0.0              # optional manual trim applied after segment normalization
+    voices:
+      openai:
+        voice_id: nova
+        model: tts-1
+      elevenlabs:
+        voice_id: rGo0C9ZSs6Oklg31XCSB
+        settings:
+          stability: 0.7
+          similarity_boost: 0.75
+          style: 0.0
+          use_speaker_boost: true
+
+processing:
+  output:
+    format: mp3
+    bitrate: 192k
+    sample_rate: 44100
+    normalization: true
+    target_lufs: -16.0          # final episode target
+    segment_normalization: true # per-segment balancing before concat
+    dialog_target_lufs: -18.0   # per-segment target (headroom below episode target)
+  providers:
+    default: openai             # openai | elevenlabs

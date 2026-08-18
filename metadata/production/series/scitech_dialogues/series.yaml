@@ -1,6 +1,0 @@
-SeriesID: scitech_dialogues
-title: SciTech Dialogues
-defaultSpeakers:
-  - alice
-  - bob
-StyleID: scitech_informal
