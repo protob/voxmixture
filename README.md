@@ -5,7 +5,7 @@ loudness-balanced mp3, synthesizing each line through OpenAI or ElevenLabs TTS.
 
 ## Requirements
 
-- [Bun](https://bun.sh) >= 1.1 (the only supported runtime)
+- [Bun](https://bun.sh) >= 1.1
 - **ffmpeg on PATH**
 - API keys for OpenAI and/or ElevenLabs
 
